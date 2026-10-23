@@ -13,7 +13,11 @@ jobs:
         with:
           flutter-version: '3.19.x'
           channel: 'stable'
-      - run: flutter create . --platforms=android --overwrite
+      - name: Check and create Android scaffolding
+        run: |
+          if [ ! -d "android" ]; then
+            flutter create . --project-name=speed_line --platforms=android
+          fi
       - run: flutter pub get
       - run: flutter build apk --release
       - uses: actions/upload-artifact@v4
