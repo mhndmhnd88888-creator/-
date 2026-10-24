@@ -341,23 +341,22 @@ class HomeScreen extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
         border: Border.all(color: Colors.white12),
       ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Row(
-            children: [
-              const Icon(Icons.devices, color: Colors.blueAccent, size: 24),
-              const  SizedBox(height: 8),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(deviceName, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
-                  const SizedBox(height: 2),
-                  Text(ip, style: const TextStyle(color: Colors.white60, fontSize: 12)),
-                ],
-              ),
-            ],
-          ),
+      Row(
+  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+  children: const [
+    Text(
+      'حالة الاشتراك:',
+      style: TextStyle(color: Colors.white70),
+    ),
+    Chip(
+      backgroundColor: Colors.green,
+      label: Text(
+        'نشط (Active)',
+        style: TextStyle(color: Colors.white, fontSize: 12),
+      ),
+    ),
+  ],
+),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               backgroundColor: isCurrent ? Colors.grey.withOpacity(0.3) : Colors.redAccent.withOpacity(0.2),
