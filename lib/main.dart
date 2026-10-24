@@ -342,12 +342,12 @@ class HomeScreen extends StatelessWidget {
         border: Border.all(color: Colors.white12),
       ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.between,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Row(
             children: [
               const Icon(Icons.devices, color: Colors.blueAccent, size: 24),
-              const SizedBox(width: 12),
+              const  SizedBox(height: 8),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
